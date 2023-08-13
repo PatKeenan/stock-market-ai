@@ -1,0 +1,18 @@
+{
+  "name": "stock-market-ai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run start --parallel",
+    "clean": "npx lerna clean -y && yarn"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^7.1.5",
+    "typescript": "^5.1.6"
+  }
+}
