@@ -8,11 +8,34 @@
   ],
   "scripts": {
     "start": "lerna run start --parallel",
-    "clean": "npx lerna clean -y && yarn"
+    "clean": "npx lerna clean -y && yarn",
+    "prepare": "husky install",
+    "format": "lerna run format --parallel",
+    "lint": "lerna run lint --parallel"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/node": "^20.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1"
+  },
   "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "husky": "^8.0.0",
     "lerna": "^7.1.5",
+    "lint-staged": "^14.0.0",
+    "prettier": "^3.0.1",
     "typescript": "^5.1.6"
+  },
+  "lint-staged": {
+    "*.{tsx,ts,js}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
