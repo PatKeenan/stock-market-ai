@@ -1,12 +1,14 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
     "composite": true,
-    "skipLibCheck": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
   },
-  "include": ["src"],
-  "references": [{ "path": "../../tsconfig.json" }, { "path": "./tsconfig.node.json"}]
+  "include": ["src/**/*", "vite.config.ts"],
 }
