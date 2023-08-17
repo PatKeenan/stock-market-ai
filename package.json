@@ -11,8 +11,12 @@
     "clean": "npx lerna clean -y && yarn",
     "prepare": "husky install",
     "format": "lerna run format --parallel",
+    "migrate": "yarn server migrate",
     "lint": "lerna run lint --parallel",
     "server": "yarn workspace server",
+    "db:up": "yarn workspace server db:up",
+    "db:migrate": "yarn workspace server db:migrate",
+    "db:down": "yarn workspace server db:down",
     "web": "yarn workspace web"
   },
   "dependencies": {
