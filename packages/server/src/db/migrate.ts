@@ -1,6 +1,7 @@
 import fs from 'fs'
-import { db } from '../utils/db-client'
-import { MigrationUtils } from './utils/MigrationUtils'
+
+import { db } from '@/utils/db-client'
+import { MigrationUtils } from '@/db/utils/MigrationUtils'
 
 // Get all the files in the migrations directory which is up one level from this file
 const migrations = fs.readdirSync(__dirname + '/migrations')

@@ -1,16 +1,13 @@
 import express from 'express'
-import router from './models/root'
+import bodyParser from 'body-parser'
 
-import { db } from './utils/db-client'
+import { api } from './api'
 
-const app = express()
+const server = express()
 
-app.use('/api/v1', router)
+server.use(bodyParser.json())
+server.use(`/api/v1`, api)
 
-app.get('/', async (req, res) => {
-    const data = await db.query('SELECT * FROM users')
-})
-
-app.listen(3001, () => {
+server.listen(3001, () => {
     console.log('Server is running on port 3001')
 })
