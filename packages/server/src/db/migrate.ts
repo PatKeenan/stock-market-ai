@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-import { db } from '@/utils/db-client'
+import { db } from '@/lib/db-client'
 import { MigrationUtils } from '@/db/utils/MigrationUtils'
 
 // Get all the files in the migrations directory which is up one level from this file

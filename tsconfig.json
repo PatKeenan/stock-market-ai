@@ -19,7 +19,7 @@
       "noUnusedParameters": true,
       "noFallthroughCasesInSwitch": true,
       "paths": {
-        "server/*": ["./packages/server/src"],
+        "@/common/*": ["./packages/common/src"],
       }
     },
     "exclude": ["dist", "node_modules"]
