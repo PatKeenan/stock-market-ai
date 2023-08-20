@@ -18,7 +18,8 @@
     "db:migrate": "yarn workspace server db:migrate",
     "db:down": "yarn workspace server db:down",
     "web": "yarn workspace web",
-    "common": "yarn workspace common"
+    "common": "yarn workspace common",
+    "python-server": "yarn workspace python-server"
   },
 
   "devDependencies": {
